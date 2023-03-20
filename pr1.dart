@@ -11,7 +11,7 @@ class RightTriangle{
     double a = atan(leg1/leg2)*(180/pi);
     return [90, a, 90-a];
   }
-  double getRadius(){
+  double getOutterRadius(){
     return pow(pow(leg1, 2)+pow(leg2, 2), 0.5)/2;
   }
   void increaseLegs({double leg1=0, double leg2=0}){
