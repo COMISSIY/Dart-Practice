@@ -17,12 +17,12 @@ class RightTriangle {
     return pow(pow(leg1, 2) + pow(leg2, 2), 0.5) / 2;
   }
 
-  void increaseLegs({double leg1 = 0, double leg2 = 0}) {
+  void increaseLegs({double percentForLeg1 = 0, double percentForLeg2 = 0}) {
     this.leg1 *= (1 + leg1 / 100);
     this.leg2 *= (1 + leg2 / 100);
   }
 
-  void decreaseLegs({double leg1 = 0, double leg2 = 0}) {
+  void decreaseLegs({double percentForLeg1 = 0, double percentForLeg2 = 0}) {
     this.leg1 *= (1 - leg1 / 100);
     this.leg2 *= (1 - leg2 / 100);
   }
@@ -34,6 +34,6 @@ void main() {
   print(triangle.getPerimteter());
   print(triangle.getAngles());
   print(triangle.getOutterRadius());
-  triangle.increaseLegs(leg1: 10, leg2: 10);
-  triangle.decreaseLegs(leg1: 10, leg2: 10); //значение не вернется к изначальному, т.к. математика
+  triangle.increaseLegs(percentForLeg1: 10, percentForLeg2: 10);
+  triangle.decreaseLegs(percentForLeg1: 10, percentForLeg2: 10); //значение не вернется к изначальному, т.к. математика
 }
